@@ -32,6 +32,7 @@ namespace PortExhaustion
             {
                 endpoints.MapGet("/", async context =>
                 {
+                    await Task.Delay(TimeSpan.FromMinutes(1));
                     await context.Response.WriteAsync("Hello World!");
                 });
             });
